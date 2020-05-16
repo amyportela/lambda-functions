@@ -2,11 +2,9 @@ import json
 from core import logger
 from pymongo import MongoClient #it is not default, you need to install the module
 from bson.json_util import dumps
-
 from core.config.mongo import settings
 
 def get_data():
-
     logger.info("Getting data from mongo-db")
     db_name = "dbname"
 
