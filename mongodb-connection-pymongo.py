@@ -1,6 +1,6 @@
 import json
 from core import logger
-from pymongo import MongoClient #necessário deploy de package 
+from pymongo import MongoClient #it is not default, you need to install the module
 from bson.json_util import dumps
 
 from core.config.mongo import settings
@@ -10,7 +10,7 @@ def get_data():
     logger.info("Getting data from mongo-db")
     db_name = "dbname"
 
-    print("Iniciando conexao com o MongoDB, db={}".format(db_name))
+    print("Start connection MongoDB, db={}".format(db_name))
 
     mongo_user = settings["mongo_user"]
     mongo_password = settings["mongo_password"]
